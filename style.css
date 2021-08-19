@@ -2,6 +2,9 @@
   padding: 0;
   margin: 0;
 }
+html {
+  width: 100%;
+}
 body {
   background: rgb(136, 221, 192);
 }
@@ -32,7 +35,7 @@ body {
   border-radius: 5px;
   margin: 5px;
 }
-#stop_cor,
+
 #rest {
   text-align: center;
   background-color: rgb(224, 101, 13);
@@ -42,27 +45,28 @@ body {
   text-align: center;
   position: absolute;
   top: 55%;
-  left: 45%;
+  left: 50%;
   border: none;
   border-radius: 5px;
   font-size: 15px;
 }
 #rest {
-  padding: 5px;
+  padding: 10px;
 }
-#brdr {
-  margin: 0 auto;
-  border: 3px solid black;
+#int {
+  border: 2px solid black;
   border-radius: 4px;
+  outline: none;
+  text-align: center;
+  position: absolute;
+  left: 40%;
+  font-size: 25px;
 }
 
 #bkclor span {
   font-size: 50px;
 }
-input {
-  outline: none;
-  text-align: center;
-}
+
 .text {
   display: flex;
   justify-content: center;
@@ -83,12 +87,26 @@ input {
 .text span:nth-child(4) {
   margin-left: 60px;
 }
-#brdr input {
-  font-size: 25px;
-}
+
 #hr {
   color: rgb(43, 176, 180);
   width: 50%;
   margin: 0 auto;
   border: 2px solid;
+}
+
+@media (max-width: 600px) {
+  html {
+    width: 100%;
+  }
+  .text {
+    top: 36%;
+    left: 17%;
+  }
+  #int {
+    left: 20%;
+  }
+  #rest {
+    top: 55%;
+  }
 }

@@ -5,7 +5,7 @@ let color = document.getElementById("int");
 
 document.getElementById("int").addEventListener("keyup", read);
 document.getElementById("int").addEventListener("keypress", start);
-document.getElementById("stop_cor").addEventListener("click", set);
+// document.getElementById("stop_cor").addEventListener("click", set);
 rest.addEventListener("click", newup);
 
 let cor = [0, 0, 0, 0];
@@ -63,6 +63,10 @@ function read() {
     } else {
       brdr.style.borderColor = "red";
     }
+    if (!int) {
+      clearInterval(stp);
+      newup();
+    }
   }
 }
 
@@ -76,4 +80,5 @@ function newup() {
   color.style.color = "black";
   brdr.style.borderColor = "black";
   st = true;
+  clearInterval(stp);
 }
