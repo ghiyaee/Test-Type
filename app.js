@@ -6,6 +6,10 @@ let color = document.getElementById("int");
 document.getElementById("int").addEventListener("keyup", read);
 document.getElementById("int").addEventListener("keypress", start);
 // document.getElementById("stop_cor").addEventListener("click", set);
+function load() {
+ color.focus()
+}
+load()
 rest.addEventListener("click", newup);
 
 let cor = [0, 0, 0, 0];
@@ -48,6 +52,7 @@ function start() {
     stp = setInterval(timeer, 10);
     st = false;
   }
+ 
 }
 
 function read() {
